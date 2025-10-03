@@ -168,6 +168,7 @@ span{
   flex-wrap: wrap;
   justify-content: space-evenly;
   background-color: #E3E6E6;
+  overflow:hidden;
 }
 
 .box {
