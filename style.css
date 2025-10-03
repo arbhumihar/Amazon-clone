@@ -166,7 +166,7 @@ span{
 
 .shop-section {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* Default: 6 per row */
+  grid-template-columns: repeat(6, 1fr); /* Default: 6 per row for desktop & tablet */
   gap: 15px;
   background-color: #E3E6E6;
   padding: 10px;
@@ -180,7 +180,7 @@ span{
 
 .box-img {
   width: 100%;
-  height: 200px;              /* Fixed height so background-image dikhe */
+  height: 200px; /* Fixed height so background-image visible */
   background-position: center;
   background-size: cover;
   margin-top: 1rem;
@@ -202,7 +202,7 @@ span{
   }
 }
 /* 📱 Mobile (max 600px) → 4 per row */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .shop-section {
     grid-template-columns: repeat(4, 1fr);
   }
