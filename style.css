@@ -163,25 +163,30 @@ span{
 .hero-msg a{
     color: #007185;
 }
-
 .shop-section {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr); /* Desktop & Tablet: 6 per row */
-  gap: 10px;
-  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #E3E6E6;
 }
 
 .box {
   background-color: white;
-  padding: 10px;
+  padding: 20px 15px;
+  margin-top: 15px;
+  flex: 1 1 200px;   /* minimum width 200px */
+  max-width: 23%;   /* laptop pe 4 box */
+  height: auto;     /* fix height hata diya */
 }
-
 .box-img {
   width: 100%;
-  height: 200px;
+  height: 200px;          /* Fixed height taaki background-image dikh sake */
   background-position: center;
   background-size: cover;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
+
 
 .box-content {
   margin: 0 1rem;
@@ -197,10 +202,11 @@ span{
     max-width: 45%;  /* Tablet pe 2 box ek row */
   }
 }
-/* Mobile (screen ≤ 600px) → 4 per row */
+
+/* 📱 Mobile ke liye thoda chhota height */
 @media (max-width: 600px) {
-  .shop-section {
-    grid-template-columns: repeat(4, 1fr);
+  .box-img {
+    height: 180px;
   }
 }
 
